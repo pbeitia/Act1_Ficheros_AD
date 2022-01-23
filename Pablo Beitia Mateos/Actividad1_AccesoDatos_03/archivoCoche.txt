@@ -1,0 +1,2 @@
+Coche [id=1, matricula=2, marca=3, modelo=4, color=5]
+Coche [id=20, matricula=23432, marca=SEAT, modelo=IBIZA, color=NEGRO]
