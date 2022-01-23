@@ -10,7 +10,11 @@ import persistencia.DaoCoches;
 public class EscritorFicheroTexto {
 
 	public static String fichero = "coches.txt";
-
+	
+	/**
+	 * Escribe en un fichero de texto los coches contenidos en el arrayList de daoCoches 
+	 * @param daoCoches
+	 */
 	public void escribirFicheroTexto(DaoCoches daoCoches) {
 
 		try (FileWriter fw = new FileWriter(fichero); BufferedWriter bfw = new BufferedWriter(fw)) {

@@ -14,6 +14,11 @@ public class LectorFicheroBinario {
 
 	public static final String fichero = "coches.dat";
 
+	
+	/**
+	 * Lee de un fichero binario los coches contenidos en el arrayList de daoCoches 
+	 * @param daoCoches
+	 */
 	@SuppressWarnings("unchecked")
 	public void lecturaInicial(DaoCoches daoCoches) {
 

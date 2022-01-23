@@ -15,9 +15,9 @@ public class DaoCoches {
 	}
 
 	/**
-	 * 
+	 * Añade un coche al arrayList
 	 * @param coche
-	 * @return
+	 * @return si existe un coche con la matricula igual a la del Coche pasado como parametro devuelve false y no añade en caso, en caso contrario devuelve true y lo añade
 	 */
 	public boolean añadirCoche(Coche coche) {
 
@@ -38,9 +38,9 @@ public class DaoCoches {
 	}
 
 	/**
-	 * 
+	 * Borra el coche que se encuentre en el arraylist que tiene el id pasado como parametro
 	 * @param id
-	 * @return
+	 * @return true si lo borra y false si no
 	 */
 	public boolean borrarCoche(int id) {
 
@@ -51,6 +51,7 @@ public class DaoCoches {
 			for (int i = 0; i < listaCoches.size(); i++) {
 				if (listaCoches.get(i).getId() == id) {
 					borrado = listaCoches.remove(listaCoches.get(i));
+					System.out.println("El coche se ha borrado");
 				}
 			}
 
@@ -63,9 +64,9 @@ public class DaoCoches {
 	}
 
 	/**
-	 * 
+	 * Consulta el coche que se encuentre en el Arraylist que tiene el id pasado como parametro
 	 * @param id
-	 * @return
+	 * @return Devuelve un objeto coche si se encuentra en el ArrayList y null si no lo encuentra
 	 */
 	public Coche consultarCoche(int id) {
 
@@ -90,8 +91,8 @@ public class DaoCoches {
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Lista los coches del ArrayList
+	 * @return listado de coches
 	 */
 	public List<Coche> listarCoches() {
 

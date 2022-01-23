@@ -10,8 +10,11 @@ public class Menu {
 	
 	static Scanner sc = new Scanner(System.in);
 
-	
-	public static String menu(DaoCoches daoCoches) {
+	/**
+	 * Muestra el menu de la aplicacion
+	 * @param daoCoches
+	 */
+	public static void menu(DaoCoches daoCoches) {
 		
 		String opcion = "0";
 		
@@ -22,7 +25,7 @@ public class Menu {
 			System.out.println("2.- Borrar coche por id");
 			System.out.println("3.- Consulta coche por id");
 			System.out.println("4.- Listado de coches");
-			System.out.println("5.- Exportar coches a archivo de texto”");
+			System.out.println("5.- Exportar coches a archivo de text”");
 			System.out.println("6.- Terminar el programa");
 
 			opcion = sc.nextLine();
@@ -30,10 +33,14 @@ public class Menu {
 			ejecutarOpcion(opcion, daoCoches);
 
 	}
-		return opcion;
+	
 
 }
-	
+	/**
+	 * Ejecuta la opcion elegida en el menu
+	 * @param opcion
+	 * @param daoCoches
+	 */
 	public static void ejecutarOpcion(String opcion, DaoCoches daoCoches) {
 		
 		String id;
@@ -71,10 +78,12 @@ public class Menu {
 			System.out.println(daoCoches.consultarCoche(Integer.parseInt(id)));
 			break;
 		case "4":
+			System.out.println("El almacen contiene los siguientes coches:");
 			System.out.println(daoCoches.listarCoches());
 			break;
 		case "5":
 			escritorFicheroTexto.escribirFicheroTexto(daoCoches);
+			System.out.println("Se han exportado los coches");
 			break;
 
 		}
